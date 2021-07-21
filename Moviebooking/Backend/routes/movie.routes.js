@@ -1,11 +1,11 @@
 const express = require('express');
-const { findAllMovies } = require('../controllers/movie.controller');
+const { findAllMovies, findOne, findShows } = require('../controllers/movie.controller');
 
 const router = express.Router();
 
-
 router.route('/').get(findAllMovies)
-
+router.route('/:id').get(findOne)
+router.route('/:id/shows').get(findShows)
 
 
 

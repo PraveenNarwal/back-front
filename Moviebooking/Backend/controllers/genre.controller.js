@@ -1,9 +1,15 @@
 const Genre = require('../models/genre.model')
 
-const findAllGenres = (req, res) => {
+const findAllGenres = async (req, res) => {
 
-    res.send("All Genres Data in JSON format from Mongo DB")
+    try {
+        const fetchedGenre = await Genre.find()
 
+        res.send(fetchedGenre);
+
+    } catch (error) {
+        res.status(400).send(error)
+    }
 
 }
 
