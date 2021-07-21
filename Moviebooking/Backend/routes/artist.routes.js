@@ -1,8 +1,8 @@
 const express = require('express');
-const { findAllArtists, artistData } = require('../controllers/artist.controller');
+const { findAllArtists } = require('../controllers/artist.controller');
 
 const router = express.Router();
 
-router.route('/').get(findAllArtists).post(artistData)
+router.route('/').get(findAllArtists)
 
 module.exports = router

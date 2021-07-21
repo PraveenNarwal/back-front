@@ -1,8 +1,8 @@
 const express = require('express');
-const { findAllGenres, insertdata } = require('../controllers/genre.controller');
+const { findAllGenres } = require('../controllers/genre.controller');
 
 const router = express.Router();
 
-router.route('/').get(findAllGenres).post(insertdata)
+router.route('/').get(findAllGenres)
 
 module.exports = router
