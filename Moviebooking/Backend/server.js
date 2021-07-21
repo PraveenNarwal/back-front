@@ -14,13 +14,13 @@ app.get('/', (req, res) => {
     res.json({ message: "Welcome to  Movie booking application development." });
 })
 
-app.use('/movies', movieRoutes)
-app.use('/genres', genresRoutes)
-app.use('/artists', artistsRoutes)
-app.use('/', signupRoutes)
+app.use('/api/movies', movieRoutes)
+app.use('/api/genres', genresRoutes)
+app.use('/api/artists', artistsRoutes)
+app.use('/api', signupRoutes)
 
 
-app.listen(9000, console.log('Server Started...'))
+app.listen(8085, console.log('Server Started...'))
 
 
 
