@@ -17,6 +17,7 @@ app.get('/', (req, res) => {
 app.use('/movies', movieRoutes)
 app.use('/genres', genresRoutes)
 app.use('/artists', artistsRoutes)
+app.use('/', signupRoutes)
 
 
 app.listen(9000, console.log('Server Started...'))
